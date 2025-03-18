@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: url('images/Background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+    }
+    to {
+        text-shadow: 0 0 15px white, 0 0 30px cyan;
+    }
+}
+
+#search {
+    padding: 10px;
+    width: 50%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.topic {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.topic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px cyan;
+}
+
+.stars, .stars2, .stars3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url('images/stars.png') repeat;
+}
+
+.stars {
+    animation: twinkle 50s linear infinite;
+}
+
+.stars2 {
+    animation: twinkle 100s linear infinite;
+    opacity: 0.6;
+}
+
+.stars3 {
+    animation: twinkle 150s linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes twinkle {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-1000px);
+    }
+}
+
+/* Confetti */
+.confetti {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: cyan;
+    top: 0;
+    opacity: 0.8;
+    border-radius: 50%;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-10px);
+    }
+    to {
+        transform: translateY(100vh);
+    }
+}

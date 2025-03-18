@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    background: url('images/Background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    margin: 50px auto;
+    width: 80%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 15px cyan;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-shadow: 0 0 10px cyan;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px cyan; }
+    to { text-shadow: 0 0 20px cyan; }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid cyan;
+    font-size: 1.2em;
+    transition: background 0.3s ease;
+}
+
+/* Hover Effect */
+tr:hover {
+    background: rgba(0, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+/* View Answers Button */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: cyan;
+    color: black;
+    font-size: 1.2em;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    color: black;
+}
+/* Confetti Canvas Fix */
+#confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Prevents interaction issues */
+    z-index: -1; /* Sends confetti behind other elements */
+}
